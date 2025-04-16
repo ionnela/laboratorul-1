@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Înregistrare</title>
+  <link rel="stylesheet" href="inregistrare.css">
+</head>
+<body>
+  <div id="step1" class="form-container">
+    <h1>Pasul 1: Detalii personale</h1>
+    <form id="formStep1">
+      <input type="text" id="firstName" placeholder="Prenume" required>
+      <input type="text" id="lastName" placeholder="Nume" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="phone" placeholder="Telefon" required>
+      <button type="submit">Continuă</button>
+    </form>
+  </div>
+
+  <div id="step2" class="form-container" style="display: none;">
+    <h1>Pasul 2: Setează parola</h1>
+    <form id="formStep2">
+      <input type="password" id="password" placeholder="Parolă" required>
+      <div id="passwordRules">
+        <p>Parola trebuie să conțină:</p>
+        <ul>
+          <li id="lengthRule">Minim 8 caractere</li>
+          <li id="uppercaseRule">Cel puțin o literă mare</li>
+          <li id="specialOrDigitRule">Cel puțin o cifră sau un simbol special (!@#$%^&*)</li>
+        </ul>
+      </div>
+      <button type="submit">Finalizează</button>
+    </form>
+  </div>
+
+  <div id="step3" class="form-container" style="display: none;">
+    <h1>V-ați înregistrat cu succes!</h1>
+    <p>Mulțumim pentru înregistrare!</p>
+    <button id="redirectToLogin">Mergi la autentificare</button>
+  </div>
+
+  <script src="inregistrare.js"></script>
+</body>
+</html>
